@@ -32,6 +32,20 @@
     
     [self.view addSubview:self.signLabel];
     self.signLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100, 450, 100, 14);
+    
+    [self initHeaderBar];
+}
+
+- (void)initHeaderBar
+{
+    UIBarButtonItem *finishItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(rightFinishClicked)];
+    self.navigationItem.rightBarButtonItem = finishItem;
+}
+
+#pragma mark - event response
+- (void)rightFinishClicked
+{
+    
 }
 
 #pragma mark - getter and setter
