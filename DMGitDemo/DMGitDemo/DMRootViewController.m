@@ -7,6 +7,7 @@
 //
 
 #import "DMRootViewController.h"
+#import "DMImageViewController.h"
 
 @interface DMRootViewController ()
 
@@ -36,7 +37,8 @@
 #pragma mark - event response
 - (void)btnClicked:(id)sender
 {
-    
+    DMImageViewController *imgVC = [[DMImageViewController alloc] init];
+    [self.navigationController pushViewController:imgVC animated:YES];
 }
 
 #pragma mark - getter and setter
