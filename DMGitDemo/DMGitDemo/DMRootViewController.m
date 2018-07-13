@@ -48,6 +48,7 @@
         _myBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _myBtn.backgroundColor = [UIColor greenColor];
         _myBtn.exclusiveTouch = YES;
+        [_myBtn setTitle:@"点我" forState:UIControlStateNormal];
         [_myBtn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     
