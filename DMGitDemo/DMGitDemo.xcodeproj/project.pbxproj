@@ -13,6 +13,7 @@
 		69662B6520F79E510099A4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69662B6320F79E510099A4CC /* LaunchScreen.storyboard */; };
 		69662B6820F79E510099A4CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69662B6720F79E510099A4CC /* main.m */; };
 		69662B7020F79E6B0099A4CC /* DMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69662B6F20F79E6B0099A4CC /* DMRootViewController.m */; };
+		69AB5AD220F85364003E0548 /* DMImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AB5AD120F85364003E0548 /* DMImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		69662B6720F79E510099A4CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69662B6E20F79E6A0099A4CC /* DMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRootViewController.h; sourceTree = "<group>"; };
 		69662B6F20F79E6B0099A4CC /* DMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRootViewController.m; sourceTree = "<group>"; };
+		69AB5AD020F85364003E0548 /* DMImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMImageViewController.h; sourceTree = "<group>"; };
+		69AB5AD120F85364003E0548 /* DMImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				69662B5920F79E500099A4CC /* AppDelegate.m */,
 				69662B6E20F79E6A0099A4CC /* DMRootViewController.h */,
 				69662B6F20F79E6B0099A4CC /* DMRootViewController.m */,
+				69AB5AD020F85364003E0548 /* DMImageViewController.h */,
+				69AB5AD120F85364003E0548 /* DMImageViewController.m */,
 				69662B5E20F79E500099A4CC /* Main.storyboard */,
 				69662B6120F79E510099A4CC /* Assets.xcassets */,
 				69662B6320F79E510099A4CC /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69662B7020F79E6B0099A4CC /* DMRootViewController.m in Sources */,
+				69AB5AD220F85364003E0548 /* DMImageViewController.m in Sources */,
 				69662B6820F79E510099A4CC /* main.m in Sources */,
 				69662B5A20F79E500099A4CC /* AppDelegate.m in Sources */,
 			);
