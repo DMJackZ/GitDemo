@@ -13,6 +13,8 @@
 /** UI */
 @property (nonatomic, strong) UIImageView *myImgView;
 
+@property (nonatomic, strong) UILabel *signLabel;
+
 @end
 
 @implementation DMImageViewController
@@ -27,6 +29,9 @@
     
     [self.view addSubview:self.myImgView];
     self.myImgView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 300) / 2.0, 120, 300, 300);
+    
+    [self.view addSubview:self.signLabel];
+    self.signLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100, 450, 100, 14);
 }
 
 #pragma mark - getter and setter
@@ -43,5 +48,17 @@
     return _myImgView;
 }
 
+- (UILabel *)signLabel
+{
+    if (_signLabel == nil) {
+        _signLabel = [[UILabel alloc] init];
+        _signLabel.backgroundColor = [UIColor clearColor];
+        _signLabel.text = @"JackZ86";
+        _signLabel.font = [UIFont systemFontOfSize:12];
+        _signLabel.textColor = [UIColor blackColor];
+    }
+    
+    return _signLabel;
+}
 
 @end
