@@ -8,6 +8,7 @@
 
 #import "DMRootViewController.h"
 #import "DMImageViewController.h"
+#import "DMTableViewController.h"
 
 @interface DMRootViewController ()
 
@@ -15,6 +16,8 @@
 @property (nonatomic, strong) UIButton *myBtn;
 
 @property (nonatomic, strong) UILabel *signLabel;
+
+@property (nonatomic, strong) UIButton *btnTwo;
 
 @end
 
@@ -30,8 +33,11 @@
     [self.view addSubview:self.myBtn];
     self.myBtn.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 200) / 2.0, 180, 200, 40);
     
+    [self.view addSubview:self.btnTwo];
+    self.btnTwo.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 200) / 2.0, 240, 200, 40);
+    
     [self.view addSubview:self.signLabel];
-    self.signLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100, 280, 100, 14);
+    self.signLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 100, 320, 100, 14);
     
     [self initHeaderBar];
 }
@@ -52,6 +58,12 @@
 - (void)rightSettingClicked
 {
     
+}
+
+- (void)btnTwoClicked:(id)sender
+{
+    DMTableViewController *tableVC = [[DMTableViewController alloc] init];
+    [self.navigationController pushViewController:tableVC animated:YES];
 }
 
 #pragma mark - getter and setter
@@ -79,6 +91,19 @@
     }
     
     return _signLabel;
+}
+
+- (UIButton *)btnTwo
+{
+    if (_btnTwo == nil) {
+        _btnTwo = [UIButton buttonWithType:UIButtonTypeCustom];
+        _btnTwo.backgroundColor = [UIColor greenColor];
+        _btnTwo.exclusiveTouch = YES;
+        [_btnTwo setTitle:@"列表" forState:UIControlStateNormal];
+        [_btnTwo addTarget:self action:@selector(btnTwoClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _btnTwo;
 }
 
 @end
