@@ -32,6 +32,14 @@
     
     [self.view addSubview:self.signLabel];
     self.signLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100, 280, 100, 14);
+    
+    [self initHeaderBar];
+}
+
+- (void)initHeaderBar
+{
+    UIBarButtonItem *finishItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(rightSettingClicked)];
+    self.navigationItem.rightBarButtonItem = finishItem;
 }
 
 #pragma mark - event response
@@ -39,6 +47,11 @@
 {
     DMImageViewController *imgVC = [[DMImageViewController alloc] init];
     [self.navigationController pushViewController:imgVC animated:YES];
+}
+
+- (void)rightSettingClicked
+{
+    
 }
 
 #pragma mark - getter and setter
